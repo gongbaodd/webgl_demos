@@ -8,7 +8,11 @@ const setup = (_ctx: Context) => {
     throw new Error("camera needed");
   }
 
-  const controls = new OrbitControls(ctx.camera);
+  if (!ctx.renderer) {
+    throw new Error("renderer needed");
+  }
+
+  const controls = new OrbitControls(ctx.camera, ctx.renderer.domElement);
   controls.target.set(0, 100, 0);
   controls.update();
 
