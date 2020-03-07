@@ -14,6 +14,8 @@
   },
   "homepage": "https://github.com/gongbaodd/webgl_demos#readme",
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-typescript": "^7.8.3",
     "@typescript-eslint/eslint-plugin": "^2.22.1-alpha.6",
     "@typescript-eslint/parser": "^2.22.0",
     "audit-ci": "^2.5.1",
@@ -27,11 +29,17 @@
     "gh-pages": "^2.2.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "snowpack": "^1.5.2"
+    "serve": "^11.3.0"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.149",
     "@types/node": "^13.9.0",
+    "@types/three": "^0.103.2",
+    "components": "^0.1.0",
+    "lodash": "^4.17.15",
+    "three": "^0.114.0",
     "typescript": "^3.8.3"
   },
   "husky": {
@@ -51,7 +59,9 @@
   },
   "scripts": {
     "type": "tsc --noEmit",
-    "audit:ci": "audit-ci -m",
-    "commit": "git-cz"
+    "audit:ci": "audit-ci -m -w acorn",
+    "commit": "git-cz",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   }
 }

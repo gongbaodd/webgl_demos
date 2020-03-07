@@ -22,5 +22,8 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   rules: {
     quotes: ["error", "double"],
+    "import/no-unresolved": ["off"],
+    "import/extensions": ["off"],
+    "@typescript-eslint/explicit-function-return-type": ["off"],
   },
 };
