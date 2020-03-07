@@ -1,0 +1,57 @@
+{
+  "name": "webgl_demos",
+  "version": "1.0.0",
+  "description": "store my webgl projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gongbaodd/webgl_demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gongbaodd/webgl_demos/issues"
+  },
+  "homepage": "https://github.com/gongbaodd/webgl_demos#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.22.1-alpha.6",
+    "@typescript-eslint/parser": "^2.22.0",
+    "audit-ci": "^2.5.1",
+    "commitizen": "^4.0.3",
+    "emoji-cz": "^0.3.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "gh-pages": "^2.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "snowpack": "^1.5.2"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.0",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn type && yarn audit:ci && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js(x)|*.json|*.ts(x)|*.markdown|*.md": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "emoji-cz"
+    }
+  },
+  "scripts": {
+    "type": "tsc --noEmit",
+    "audit:ci": "audit-ci -m",
+    "commit": "git-cz"
+  }
+}
