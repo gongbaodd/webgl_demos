@@ -1,0 +1,11 @@
+language: node_js
+before_script:
+  - npm install -g parcel-bundler
+node_js:
+  - "12.16"
+deploy:
+  provider: script
+  script: yarn install && yarn deploy
+  skip_cleanup: true
+  on:
+    branch: dev
