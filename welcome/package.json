@@ -1,0 +1,32 @@
+{
+  "name": "welcome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "snowpack --include './js/index.js'",
+    "start": "serve ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "snowpack": {
+    "webDependencies": [
+      "lit-html",
+      "lit-element",
+      "lit-html/directives/until.js"
+    ],
+    "dedupe": [
+      "lit-element",
+      "lit-html"
+    ]
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0",
+    "snowpack": "^1.5.2"
+  }
+}
