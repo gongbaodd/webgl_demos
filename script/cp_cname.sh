@@ -1,1 +1,1 @@
-cp CNAME ./public/
+cp CNAME ./dist/
