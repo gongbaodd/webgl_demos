@@ -4,7 +4,7 @@ import { Context } from "../typings/context";
 import model from "../model/character.fbx";
 
 const load = (loader: FBXLoader) =>
-  new Promise<Geometry & Object3D>((resolve, reject) =>
+  new Promise<Geometry & Object3D>(resolve =>
     loader.load(
       model,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
