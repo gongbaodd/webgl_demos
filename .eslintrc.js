@@ -26,4 +26,13 @@ module.exports = {
     "import/extensions": ["off"],
     "@typescript-eslint/explicit-function-return-type": ["off"],
   },
+  overrides: [
+    {
+      files: ["**/*.spec.ts", "**/*.spec.tsx"],
+      rules: {
+        "no-undef": ["off"],
+        "import/first": ["off"],
+      },
+    },
+  ],
 };

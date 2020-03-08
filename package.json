@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.22.1-alpha.6",
     "@typescript-eslint/parser": "^2.22.0",
     "audit-ci": "^2.5.1",
@@ -64,6 +65,7 @@
     "test": "echo 'test'",
     "dev": "parcel index.html html/*.html",
     "build": "parcel build index.html html/*.html",
-    "deploy": "yarn build --no-source-maps && gh-pages -d dist -r https://$GH_TOKEN@github.com/gongbaodd/webgl_demos.git -b master"
+    "cp:cname": "sh script/cp_cname.sh",
+    "deploy": "yarn build --no-source-maps && yarn cp:cname && gh-pages -d dist -r https://$GH_TOKEN@github.com/gongbaodd/webgl_demos.git -b master"
   }
 }
