@@ -1,6 +1,6 @@
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { Context } from "typings/context";
 import { Geometry, AnimationMixer, Object3D, Mesh, LoopOnce } from "three";
+import { Context } from "../typings/context";
 import model from "../model/character.fbx";
 
 const load = (loader: FBXLoader) =>

@@ -1,5 +1,5 @@
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { Context } from "typings/context";
+import { Context } from "../typings/context";
 
 const setup = (_ctx: Context) => {
   const ctx = _ctx;

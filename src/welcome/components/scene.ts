@@ -1,5 +1,5 @@
-import { Context } from "typings/context";
 import { Scene, Fog } from "three";
+import { Context } from "../typings/context";
 
 const setup = (_ctx: Context) => {
   const ctx = _ctx;

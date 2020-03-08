@@ -62,8 +62,8 @@
     "audit:ci": "audit-ci -m -w acorn",
     "commit": "git-cz",
     "test": "echo 'test'",
-    "dev": "parcel index.html",
-    "build": "parcel build index.html",
+    "dev": "parcel index.html html/*.html",
+    "build": "parcel build index.html html/*.html",
     "deploy": "yarn build --no-source-maps && gh-pages -d dist -r https://$GH_TOKEN@github.com/gongbaodd/webgl_demos.git -b master"
   }
 }

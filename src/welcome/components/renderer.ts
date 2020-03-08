@@ -1,5 +1,5 @@
 import { WebGLRenderer } from "three";
-import { Context } from "typings/context";
+import { Context } from "../typings/context";
 
 const setup = (_ctx: Context) => {
   const renderer = new WebGLRenderer({
