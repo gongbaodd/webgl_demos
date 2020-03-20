@@ -29,5 +29,14 @@ module.exports = {
     "no-unused-vars": ["off"],
     "@typescript-eslint/no-unused-vars": ["off"],
     "@typescript-eslint/explicit-function-return-type": ["off"],
+    "import/no-unresolved": ["off"],
   },
+  overrides: [
+    {
+      files: ["next.config.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": ["off"],
+      },
+    },
+  ],
 };
