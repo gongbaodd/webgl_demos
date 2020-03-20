@@ -6,10 +6,8 @@ const Playground = dynamic(() => import("../components/BabylonPlayground"), {
 });
 
 const DefaultPlayground = () => (
-  <div className="row">
-    <div className="col-xs-12 col-md-6">
-      <Playground />
-    </div>
+  <div>
+    <Playground />
   </div>
 );
 
