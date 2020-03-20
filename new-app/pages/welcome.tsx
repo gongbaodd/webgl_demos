@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const Playground = dynamic(() => import("../components/PlaygroundWelcome"));
+const Playground = dynamic(() => import("../playgrounds/welcome"));
 
 const Welcome = () => <Playground />;
 

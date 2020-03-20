@@ -8,6 +8,7 @@ const material = new MeshBasicMaterial({
 const GridHelper = () => {
   return (
     <gridHelper
+      attach="geometry"
       //   material={material}
       args={[2000, 20, 0x000000, 0x000000]}
     ></gridHelper>

@@ -1,5 +1,5 @@
 import { Canvas } from "react-three-fiber";
-import GridHelper from "./GridHelper";
+import GridHelper from "../components/GridHelper";
 
 const Playground = () => {
   return (
