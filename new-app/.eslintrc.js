@@ -26,6 +26,8 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     quotes: ["error", "double"],
+    "no-unused-vars": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"],
     "@typescript-eslint/explicit-function-return-type": ["off"],
   },
 };
