@@ -65,7 +65,7 @@
   "pwaManifest": {
     "name": "My WebGL demos",
     "shortName": "My WebGLs",
-    "startURL": "./welcome.html",
+    "startURL": "/",
     "theme": "#fff",
     "generateIconOptions": {
       "baseIcon": "./public/icon.png",

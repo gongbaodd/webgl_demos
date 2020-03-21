@@ -1,8 +1,18 @@
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { useEffect, useState } from "react";
-import { Geometry, AnimationMixer, Object3D, Mesh, LoopOnce } from "three";
+import {
+  Geometry,
+  AnimationMixer,
+  Object3D,
+  Mesh,
+  LoopOnce,
+  Clock,
+} from "three";
+import { useFrame } from "react-three-fiber";
 
 const mixers: AnimationMixer[] = [];
+
+const clock = new Clock();
 
 const load = (loader: FBXLoader) =>
   new Promise<Geometry & Object3D>(resolve =>
@@ -37,6 +47,12 @@ const Model = () => {
     const loader = new FBXLoader();
     load(loader).then(obj => setObj(obj));
   }, []);
+
+  useFrame(() => {
+    mixers.forEach(mix => {
+      mix.update(clock.getDelta());
+    });
+  });
 
   if (!obj) {
     return null;

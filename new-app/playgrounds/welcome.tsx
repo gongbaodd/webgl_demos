@@ -1,7 +1,10 @@
 import { Canvas } from "react-three-fiber";
+import { Vector3 } from "three";
 import GridHelper from "../components/GridHelper";
-import WelcomeLight from "../components/WelcomeLight";
+import DirectLight from "../components/WelcomeDirectLight";
+import HemiLight from "../components/WelcomeHemiLight";
 import Model from "../components/WelcomeCharacter";
+import Controls from "../components/OrbitControls";
 
 const Playground = () => {
   return (
@@ -13,10 +16,11 @@ const Playground = () => {
         position: [100, 75, 300],
       }}
     >
-      <ambientLight></ambientLight>
       <GridHelper />
-      <WelcomeLight />
+      <DirectLight />
+      <HemiLight />
       <Model />
+      <Controls />
     </Canvas>
   );
 };

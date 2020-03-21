@@ -3,6 +3,7 @@ const withTM = require("next-transpile-modules")([
   "@babylonjs/core",
   "@babylonjs/loaders",
   "three/examples/jsm/loaders/FBXLoader",
+  "three/examples/jsm/controls/OrbitControls",
 ]);
 
 module.exports = withTM();
