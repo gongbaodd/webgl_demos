@@ -1,5 +1,4 @@
 import { Canvas } from "react-three-fiber";
-import { Vector3 } from "three";
 import GridHelper from "../components/GridHelper";
 import DirectLight from "../components/WelcomeDirectLight";
 import HemiLight from "../components/WelcomeHemiLight";

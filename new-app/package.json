@@ -47,10 +47,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "dev": "next -H 0.0.0.0",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "type": "tsc --noEmit",
     "audit:ci": "audit-ci -m",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "cp:cname": "sh script/cp_cname.sh"
   }
 }
