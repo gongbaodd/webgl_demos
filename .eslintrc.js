@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    node: true,
   },
   extends: [
     "eslint:recommended",
@@ -16,22 +17,26 @@ module.exports = {
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 2018,
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint"],
   rules: {
     quotes: ["error", "double"],
-    "import/no-unresolved": ["off"],
-    "import/extensions": ["off"],
+    "no-unused-vars": ["off"],
+    "@typescript-eslint/no-unused-vars": ["off"],
     "@typescript-eslint/explicit-function-return-type": ["off"],
+    "import/no-unresolved": ["off"],
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
   overrides: [
     {
-      files: ["**/*.spec.ts", "**/*.spec.tsx"],
+      files: ["next.config.js"],
       rules: {
-        "no-undef": ["off"],
-        "import/first": ["off"],
+        "@typescript-eslint/no-var-requires": ["off"],
       },
     },
   ],

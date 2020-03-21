@@ -1,0 +1,5 @@
+{
+  "ecmaVersion": "es5",
+  "module": false,
+  "files": "./out/_next/**/*.js"
+}

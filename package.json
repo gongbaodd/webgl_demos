@@ -7,45 +7,43 @@
     "type": "git",
     "url": "git+https://github.com/gongbaodd/webgl_demos.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gongbaodd/webgl_demos/issues"
-  },
-  "homepage": "https://github.com/gongbaodd/webgl_demos#readme",
-  "devDependencies": {
-    "@babel/core": "7.8.7",
-    "@babel/preset-typescript": "7.8.3",
-    "@types/jest": "25.1.4",
-    "@typescript-eslint/eslint-plugin": "2.24.0",
-    "@typescript-eslint/parser": "2.24.0",
-    "audit-ci": "2.5.1",
-    "commitizen": "4.0.3",
-    "emoji-cz": "0.3.1",
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-config-prettier": "6.10.0",
-    "eslint-plugin-import": "2.20.1",
-    "eslint-plugin-prettier": "3.1.2",
-    "gh-pages": "2.2.0",
-    "husky": "4.2.3",
-    "lint-staged": "10.0.8",
-    "parcel-bundler": "1.12.4",
-    "parcel-plugin-pwa-manifest": "^2.9.2",
-    "parcel-plugin-sw-cache": "^0.3.1",
-    "prettier": "1.19.1",
-    "serve": "11.3.0",
-    "ts-node": "^8.7.0"
-  },
   "dependencies": {
-    "@types/lodash": "4.14.149",
-    "@types/node": "13.9.2",
-    "@types/three": "0.103.2",
-    "components": "0.1.0",
-    "lodash": "4.17.15",
+    "@babylonjs/core": "^4.1.0",
+    "@babylonjs/loaders": "^4.1.0",
+    "babylonjs": "^4.1.0",
+    "next": "^9.3.1",
     "next-transpile-modules": "^3.1.0",
-    "three": "0.114.0",
-    "typescript": "3.8.3"
+    "react": "^16.13.0",
+    "react-babylonjs": "^2.0.6",
+    "react-dom": "^16.13.0",
+    "react-reconciler": "^0.25.1",
+    "react-three-fiber": "^4.0.21",
+    "three": "^0.114.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.2",
+    "@types/react": "^16.9.23",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "audit-ci": "^2.5.1",
+    "commitizen": "^4.0.3",
+    "emoji-cz": "^0.3.1",
+    "es-check": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^2.2.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
   },
   "husky": {
     "hooks": {
@@ -62,35 +60,16 @@
       "path": "emoji-cz"
     }
   },
-  "pwaManifest": {
-    "name": "My WebGL demos",
-    "shortName": "My WebGLs",
-    "startURL": "/",
-    "theme": "#fff",
-    "generateIconOptions": {
-      "baseIcon": "./public/icon.png",
-      "sizes": [
-        192,
-        384,
-        512
-      ],
-      "genFavicons": true
-    }
-  },
-  "cache": {
-    "disablePlugin": false,
-    "inDev": false,
-    "strategy": "default",
-    "clearDist": true
-  },
   "scripts": {
+    "test": "echo 'test'",
+    "dev": "next -H 0.0.0.0",
+    "build": "next build && next export",
+    "start": "next start",
     "type": "tsc --noEmit",
     "audit:ci": "audit-ci -m -w acorn",
     "commit": "git-cz",
-    "test": "echo 'test'",
-    "dev": "parcel index.html html/*.html",
-    "build": "parcel build index.html html/*.html",
     "cp:cname": "sh script/cp_cname.sh",
-    "deploy": "yarn build --no-source-maps && yarn cp:cname && gh-pages -d dist -r https://$GH_TOKEN@github.com/gongbaodd/webgl_demos.git -b master"
+    "es:check": "es-check",
+    "deploy": "gh-pages -d out -r https://$GH_TOKEN@github.com/gongbaodd/webgl_demos.git -b master"
   }
 }
