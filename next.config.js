@@ -7,5 +7,6 @@ const withTM = require("next-transpile-modules")([
   "three/examples/jsm/controls/OrbitControls",
   "three",
 ]);
+const withPlugins = require("next-compose-plugins");
 
-module.exports = withTM();
+module.exports = withPlugins([[withTM]]);
