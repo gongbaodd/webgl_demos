@@ -8,5 +8,6 @@ const withTM = require("next-transpile-modules")([
   "three",
 ]);
 const withPlugins = require("next-compose-plugins");
+const withOffline = require("next-offline");
 
-module.exports = withPlugins([[withTM]]);
+module.exports = withPlugins([[withTM], [withOffline]]);

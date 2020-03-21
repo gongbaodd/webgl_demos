@@ -1,0 +1,16 @@
+{
+  "name": "My WebGL demos",
+  "short_name": "My WebGLs",
+  "start_url": "./",
+  "scope": "/",
+  "description": "store my webgl projects",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone"
+}
