@@ -1,5 +1,7 @@
 import { Canvas } from "react-three-fiber";
 import GridHelper from "../components/GridHelper";
+import WelcomeLight from "../components/WelcomeLight";
+import Model from "../components/WelcomeCharacter";
 
 const Playground = () => {
   return (
@@ -13,6 +15,8 @@ const Playground = () => {
     >
       <ambientLight></ambientLight>
       <GridHelper />
+      <WelcomeLight />
+      <Model />
     </Canvas>
   );
 };
