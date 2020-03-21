@@ -31,6 +31,8 @@
     "husky": "4.2.3",
     "lint-staged": "10.0.8",
     "parcel-bundler": "1.12.4",
+    "parcel-plugin-pwa-manifest": "^2.9.2",
+    "parcel-plugin-sw-cache": "^0.3.1",
     "prettier": "1.19.1",
     "serve": "11.3.0",
     "ts-node": "^8.7.0"
@@ -59,6 +61,27 @@
     "commitizen": {
       "path": "emoji-cz"
     }
+  },
+  "pwaManifest": {
+    "name": "My WebGL demos",
+    "shortName": "My WebGLs",
+    "startURL": "./welcome.html",
+    "theme": "#fff",
+    "generateIconOptions": {
+      "baseIcon": "./public/icon.png",
+      "sizes": [
+        192,
+        384,
+        512
+      ],
+      "genFavicons": true
+    }
+  },
+  "cache": {
+    "disablePlugin": false,
+    "inDev": false,
+    "strategy": "default",
+    "clearDist": true
   },
   "scripts": {
     "type": "tsc --noEmit",

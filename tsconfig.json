@@ -11,5 +11,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false
-  }
+  },
+  "exclude": ["new-app"]
 }
