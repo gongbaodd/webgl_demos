@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "target": "es5",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "esnext"],
     "strict": true,
@@ -10,7 +9,12 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
   },
-  "exclude": ["new-app"]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

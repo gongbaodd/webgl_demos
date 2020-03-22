@@ -1,1 +1,1 @@
-cp CNAME ./dist/
+cp CNAME ./out/
