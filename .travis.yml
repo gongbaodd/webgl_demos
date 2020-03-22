@@ -1,5 +1,8 @@
 language: node_js
-deploy:
-  provider: script
-  script: yarn install && yarn audit:ci && yarn type && yarn build:prd && yarn cp:cname && yarn deploy
-  skip_cleanup: true
+script:
+  - yarn install
+  - yarn audit:ci
+  - yarn type
+  - yarn build:prd
+  - yarn cp:cname
+  - yarn deploy
