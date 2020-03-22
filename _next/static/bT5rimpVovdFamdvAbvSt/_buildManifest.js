@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = {"/box":["static\u002Fchunks\u002Ffb7d5399.8508944f927dce548b28.js","static\u002Fchunks\u002F7402a9f72dcc64a8c0c5f984b9333bbc88ba5d23.e6eb6b42920e0c46c933.js"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
