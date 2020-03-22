@@ -1,6 +1,5 @@
 language: node_js
 script:
-  - yarn install
   - yarn audit:ci
   - yarn type
   - yarn build:prd
