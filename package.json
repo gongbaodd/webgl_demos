@@ -72,7 +72,7 @@
     "audit:ci": "audit-ci -m -w acorn",
     "commit": "git-cz",
     "cp:cname": "sh script/cp_cname.sh",
-    "deploy:coding": "sh ./scripts/deploy_to_coding.sh",
+    "deploy:coding": "sh script/deploy_to_coding.sh",
     "es:check": "es-check",
     "deploy": "gh-pages -d out -r https://$GH_TOKEN@github.com/gongbaodd/webgl_demos.git -b master"
   }
