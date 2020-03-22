@@ -66,6 +66,7 @@
     "test": "echo 'test'",
     "dev": "next -H 0.0.0.0",
     "build": "next build && next export",
+    "build:prd": "NODE_ENV=production next build && next export",
     "start": "next start",
     "type": "tsc --noEmit",
     "audit:ci": "audit-ci -m -w acorn",
