@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = {"/box":["static\u002Fchunks\u002Ffb7d5399.8508944f927dce548b28.js","static\u002Fchunks\u002F0c3026048350db7dd48746b2be74bbaec2c33072.e6eb6b42920e0c46c933.js"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
