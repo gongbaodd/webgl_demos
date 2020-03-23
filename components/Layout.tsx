@@ -1,28 +1,32 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Layout as AntLayout, Menu } from "antd";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const { Content, Sider } = AntLayout;
 
+const menuItems = [
+  { title: "Home", url: "/" },
+  { title: "Three.js - Box", url: "/box" },
+  { title: "Babylon.js - Basic", url: "/basic" },
+];
+
 const SideMenu = () => {
+  const { pathname } = useRouter();
+  const pathIndex = menuItems.findIndex(({ url }) => url === pathname) || 0;
+
   return (
     <Sider style={{ background: "#fff" }}>
-      <Menu mode="vertical-left" defaultSelectedKeys={["1"]}>
-        <Menu.Item key="1">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <Link href="/box">
-            <a>Three.js - Box</a>
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="3">
-          <Link href="/basic">
-            <a>Babylon.js - Basic</a>
-          </Link>
-        </Menu.Item>
+      <Menu mode="vertical-left" defaultSelectedKeys={[pathIndex.toString(10)]}>
+        {menuItems.map((item, key) => {
+          return (
+            <Menu.Item key={key}>
+              <Link href={item.url}>
+                <a>{item.title}</a>
+              </Link>
+            </Menu.Item>
+          );
+        })}
       </Menu>
     </Sider>
   );
