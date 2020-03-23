@@ -7,6 +7,10 @@
   right: 0;
 }
 
+body {
+  background: transparent;
+}
+
 canvas:focus {
   outline: 0;
 }
