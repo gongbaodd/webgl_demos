@@ -8,19 +8,12 @@ const withTM = require("next-transpile-modules")([
   "three",
 ]);
 const withPlugins = require("next-compose-plugins");
-const withPWA = require("next-pwa");
 const nextSourceMaps = require("@zeit/next-source-maps")();
 const sentryConfig = require("./config/sentry.js");
+const offline = require("next-offline");
 
 module.exports = withPlugins([
-  [
-    withPWA,
-    {
-      pwa: {
-        dest: "public",
-      },
-    },
-  ],
+  [offline],
   [nextSourceMaps, sentryConfig],
   [withTM],
 ]);
