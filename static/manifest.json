@@ -1,0 +1,15 @@
+{
+	"name": "宫不上的WebGL展示",
+	"short_name": "Short name for Icon and Task",
+	"icons": [
+		{
+			"src": "/static/icons.png",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/?utm_source=web_app_manifest",
+	"display": "standalone",
+	"orientation": "natural",
+	"background_color": "#FFFFFF",
+	"theme_color": "#FFFFFF"
+}
