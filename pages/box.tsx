@@ -1,6 +1,7 @@
 import { Canvas, useFrame } from "react-three-fiber";
 import React, { useRef, useState } from "react";
 import { Vector3 } from "three";
+import Layout from "../components/Layout";
 
 const Box = props => {
   const mesh = useRef<THREE.Mesh>();
@@ -34,11 +35,13 @@ const Box = props => {
 
 const Three = () => {
   return (
-    <Canvas>
-      <ambientLight></ambientLight>
-      <pointLight name="light1" position={new Vector3(10, 10, 10) as any} />
-      <Box name="box1" position={new Vector3(-1.2, 0, 0) as any} />
-    </Canvas>
+    <Layout>
+      <Canvas>
+        <ambientLight></ambientLight>
+        <pointLight name="light1" position={new Vector3(10, 10, 10) as any} />
+        <Box name="box1" position={new Vector3(-1.2, 0, 0) as any} />
+      </Canvas>
+    </Layout>
   );
 };
 

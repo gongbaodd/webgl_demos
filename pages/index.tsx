@@ -1,5 +1,14 @@
+import dynamic from "next/dynamic";
+import Layout from "../components/Layout";
+
+const Playground = dynamic(() => import("../playgrounds/welcome"));
+
 const Index = () => {
-  return <p>Hello Next.js</p>;
+  return (
+    <Layout>
+      <Playground />
+    </Layout>
+  );
 };
 
 export default Index;
