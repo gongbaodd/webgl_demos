@@ -3,6 +3,6 @@ script:
   - yarn audit:ci
   - yarn type
   - yarn build:prd
-  - yarn cy:test
+  # - yarn cy:test
   - yarn cp:cname
   - if [ "$TRAVIS_BRANCH" = "prd" ]; then yarn deploy && yarn deploy:coding; fi
