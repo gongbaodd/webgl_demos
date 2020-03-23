@@ -13,7 +13,6 @@ const nextSourceMaps = require("@zeit/next-source-maps")();
 const sentryConfig = require("./config/sentry.js");
 
 module.exports = withPlugins([
-  [withTM],
   [
     withPWA,
     {
@@ -23,4 +22,5 @@ module.exports = withPlugins([
     },
   ],
   [nextSourceMaps, sentryConfig],
+  [withTM],
 ]);
