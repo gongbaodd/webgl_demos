@@ -9,11 +9,14 @@ const withTM = require("next-transpile-modules")([
 ]);
 const withPlugins = require("next-compose-plugins");
 const nextSourceMaps = require("@zeit/next-source-maps")();
-const sentryConfig = require("./config/sentry.js");
+const withManifest = require("next-manifest");
 const offline = require("next-offline");
+const sentryConfig = require("./config/sentry.js");
+const manifest = require("./config/manifest");
 
 module.exports = withPlugins([
   [offline],
   [nextSourceMaps, sentryConfig],
+  [withManifest, manifest],
   [withTM],
 ]);
