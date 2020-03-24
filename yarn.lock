@@ -8213,10 +8213,10 @@ react-ga@2.7.0:
   resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.7.0.tgz#24328f157f31e8cffbf4de74a3396536679d8d7c"
   integrity sha512-AjC7UOZMvygrWTc2hKxTDvlMXEtbmA0IgJjmkhgmQQ3RkXrWR11xEagLGFGaNyaPnmg24oaIiaNPnEoftUhfXA==
 
-react-github-corner@^2.3.0:
+react-github-corner@2.3.0:
   version "2.3.0"
-  resolved "https://registry.npm.taobao.org/react-github-corner/download/react-github-corner-2.3.0.tgz#73ab17324b670c9cd955567b09663d385cfb05ef"
-  integrity sha1-c6sXMktnDJzZVVZ7CWY9OFz7Be8=
+  resolved "https://registry.yarnpkg.com/react-github-corner/-/react-github-corner-2.3.0.tgz#73ab17324b670c9cd955567b09663d385cfb05ef"
+  integrity sha512-yVh8wtAfVA5CQYn8ygyxtsuCMoyiSEBVnzQJ3ynyWxZ1BzT2MHop4baZn/PnUnU9Yh8mwhLS5Y1RVxM5zNotGw==
 
 react-is@16.8.6:
   version "16.8.6"
@@ -10120,10 +10120,10 @@ winston@^2.3.1:
     isstream "0.1.x"
     stack-trace "0.0.x"
 
-with-utterances@^1.5.0:
+with-utterances@1.5.0:
   version "1.5.0"
-  resolved "https://registry.npm.taobao.org/with-utterances/download/with-utterances-1.5.0.tgz#fe2cd9cf76e8d6db8563f6318c951735211ea752"
-  integrity sha1-/izZz3bo1tuFY/YxjJUXNSEep1I=
+  resolved "https://registry.yarnpkg.com/with-utterances/-/with-utterances-1.5.0.tgz#fe2cd9cf76e8d6db8563f6318c951735211ea752"
+  integrity sha512-ToMCOuxSNXYLxhNcywe3jO9hYO3rD8N7EL1P+ZauKERgU1sZljP5UxAA5Z0X/5MaFpZvoaCse4lNN9uL7nTY7Q==
 
 word-wrap@^1.0.3, word-wrap@~1.2.3:
   version "1.2.3"
