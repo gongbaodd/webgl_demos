@@ -36,8 +36,8 @@
     "with-utterances": "^1.5.0"
   },
   "devDependencies": {
-    "@types/node": "13.9.2",
-    "@types/react": "16.9.23",
+    "@types/node": "13.9.3",
+    "@types/react": "16.9.25",
     "@typescript-eslint/eslint-plugin": "2.24.0",
     "@typescript-eslint/parser": "2.24.0",
     "audit-ci": "2.5.1",
