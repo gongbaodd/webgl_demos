@@ -26,7 +26,7 @@
     "next-secure-headers": "1.0.1",
     "next-transpile-modules": "3.1.0",
     "react": "16.13.1",
-    "react-babylonjs": "2.0.6",
+    "react-babylonjs": "2.1.0",
     "react-dom": "16.13.1",
     "react-ga": "2.7.0",
     "react-github-corner": "^2.3.0",

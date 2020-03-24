@@ -8183,10 +8183,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-babylonjs@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/react-babylonjs/-/react-babylonjs-2.0.6.tgz#066d88bd7f1d1890076aa9caa814303f991b4481"
-  integrity sha512-9oC37QzeUp89TgqHQp35zGcCcFCkHCCv0DEyORJzj7a7u4/eMOvt78j0oJmtyjTweUzEdxH3aE1vfuGtvneUrw==
+react-babylonjs@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-babylonjs/-/react-babylonjs-2.1.0.tgz#7bcd0ddb192f323ed8b08f2d3e66d8793e7fe3cc"
+  integrity sha512-+K3GjHnJ39TDtZk790b5dk5Fs9YSObFp+sxJ0LAbCE8YYx4c/fZyxS5teGuINn2KtpO/ZqACDBTXyRCrS2cL8Q==
 
 react-dom@16.13.1:
   version "16.13.1"
