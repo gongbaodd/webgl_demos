@@ -29,6 +29,7 @@
     "react-babylonjs": "2.0.6",
     "react-dom": "16.13.1",
     "react-ga": "2.7.0",
+    "react-github-corner": "^2.3.0",
     "react-reconciler": "0.25.1",
     "react-three-fiber": "4.0.21",
     "three": "0.114.0"

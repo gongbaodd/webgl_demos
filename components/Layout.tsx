@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { Layout as AntLayout, Menu } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Github from "./Github";
 
 const { Content, Sider } = AntLayout;
 
@@ -38,6 +39,7 @@ const Layout: FC<{}> = ({ children }) => {
       <AntLayout>
         <SideMenu />
         <Content>{children}</Content>
+        <Github />
       </AntLayout>
     </>
   );
