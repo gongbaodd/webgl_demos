@@ -32,7 +32,8 @@
     "react-github-corner": "^2.3.0",
     "react-reconciler": "0.25.1",
     "react-three-fiber": "4.0.21",
-    "three": "0.114.0"
+    "three": "0.114.0",
+    "with-utterances": "^1.5.0"
   },
   "devDependencies": {
     "@types/node": "13.9.2",

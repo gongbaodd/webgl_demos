@@ -10115,6 +10115,11 @@ winston@^2.3.1:
     isstream "0.1.x"
     stack-trace "0.0.x"
 
+with-utterances@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/with-utterances/download/with-utterances-1.5.0.tgz#fe2cd9cf76e8d6db8563f6318c951735211ea752"
+  integrity sha1-/izZz3bo1tuFY/YxjJUXNSEep1I=
+
 word-wrap@^1.0.3, word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.npm.taobao.org/word-wrap/download/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"

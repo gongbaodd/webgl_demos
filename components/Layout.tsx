@@ -1,8 +1,9 @@
-import { FC, useState } from "react";
-import { Layout as AntLayout, Menu } from "antd";
+import { FC } from "react";
+import { Layout as AntLayout, Menu, Divider } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Github from "./Github";
+import Utterances from "./Utterances";
 
 const { Content, Sider } = AntLayout;
 
@@ -17,7 +18,7 @@ const SideMenu = () => {
   const pathIndex = menuItems.findIndex(({ url }) => url === pathname) || 0;
 
   return (
-    <Sider style={{ background: "#fff" }}>
+    <Sider style={{ background: "#fff" }} width={360}>
       <Menu mode="vertical-left" defaultSelectedKeys={[pathIndex.toString(10)]}>
         {menuItems.map((item, key) => {
           return (
@@ -29,6 +30,10 @@ const SideMenu = () => {
           );
         })}
       </Menu>
+
+      <Divider />
+
+      <Utterances location={{ pathname }} />
     </Sider>
   );
 };
