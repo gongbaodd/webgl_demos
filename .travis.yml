@@ -3,6 +3,9 @@ script:
   - yarn audit:ci
   - yarn type
   - yarn build:prd
-  # - yarn cy:test
+  - yarn cy:test
   - yarn cp:cname
   - if [ "$TRAVIS_BRANCH" = "prd" ]; then yarn deploy && yarn deploy:coding; fi
+
+after_script:
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN > /dev/null
