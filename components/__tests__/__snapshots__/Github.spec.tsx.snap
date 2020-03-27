@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hello 1`] = `
+<GithubCorner
+  ariaLabel="Open Github"
+  bannerColor="#151513"
+  direction="right"
+  href="https://github.com/gongbaodd/webgl_demos"
+  octoColor="#fff"
+  size={80}
+/>
+`;

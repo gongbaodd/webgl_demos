@@ -1,4 +1,5 @@
 import GithubCorner from "react-github-corner";
+import React from "react";
 
 const Github = () => {
   return (

@@ -4,9 +4,13 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     "components/*.ts",
+    "components/*.tsx",
     "components/*.js",
+    "components/*.jsx",
     "pages/*.ts",
+    "pages/*.tsx",
     "pages/*.js",
+    "pages/*.jsx",
   ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
