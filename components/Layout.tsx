@@ -10,6 +10,7 @@ const { Content, Sider } = AntLayout;
 const menuItems = [
   { title: "Home", url: "/" },
   { title: "Three.js - Box", url: "/box" },
+  { title: "Solar", url: "/solar" },
 ];
 
 const SideMenu = () => {

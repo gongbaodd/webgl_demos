@@ -12,7 +12,6 @@ class MyDocument extends Document {
         <Head>
           <Manifest />
           <meta name="generator" content="Next" />
-          <title>宫不上的WebGL实验室</title>
           <meta name="description" content="宫不上的WebGL实验室" />
           <meta property="og:title" content="宫不上的WebGL实验室" />
           <meta property="og:description" content="宫不上的WebGL实验室" />
