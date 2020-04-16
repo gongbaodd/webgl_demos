@@ -1,4 +1,5 @@
 import "antd/dist/antd.css";
+import "../node_modules/react-dat-gui/dist/index.css";
 import "../style/fix.css";
 
 import { AppProps } from "next/app";
