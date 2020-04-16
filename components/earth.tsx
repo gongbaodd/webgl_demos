@@ -1,16 +1,27 @@
-import { Mesh, SphereBufferGeometry, MeshPhongMaterial } from "three";
+import { SphereBufferGeometry, MeshPhongMaterial } from "three";
+import useRotation from "../hooks/useRotation";
+import { FC } from "react";
+import withAxes from "../hoc/withAxesHelper";
 
 const EarthGeometry = new SphereBufferGeometry(1, 6, 6);
 const EarthMaterial = new MeshPhongMaterial({
   color: 0x2233ff,
   emissive: 0x112244,
 });
-const EarthMesh = new Mesh(EarthGeometry, EarthMaterial);
-EarthMesh.position.x = 10;
 
-const Earth = () => {
-  return <primitive object={EarthMesh}></primitive>;
+const Earth: FC = ({ children }) => {
+  const mesh = useRotation();
+  return (
+    <mesh
+      geometry={EarthGeometry}
+      material={EarthMaterial}
+      position-x={10}
+      name="Earth"
+      ref={mesh}
+    >
+      {children}
+    </mesh>
+  );
 };
 
-export default Earth;
-export { EarthMesh };
+export default withAxes(Earth);

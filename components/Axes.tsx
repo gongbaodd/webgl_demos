@@ -10,7 +10,7 @@ const Axes = () => {
     window.THREE = THREE;
   });
 
-  return <primitive object={axe}></primitive>;
+  return <primitive object={axe} name="axe"></primitive>;
 };
 
 export default Axes;

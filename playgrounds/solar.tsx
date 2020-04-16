@@ -1,11 +1,11 @@
-import { Canvas, useFrame } from "react-three-fiber";
+import { Canvas, useFrame, useThree } from "react-three-fiber";
 import Sun from "../components/sun";
 import Earth from "../components/earth";
-import { useState } from "react";
+import Moon from "../components/Moon";
+import SolarSystem from "../components/SolarSystem";
+import Axes from "../components/Axes";
 
 const Solar = () => {
-  const [time, setTime] = useState(0);
-
   return (
     <Canvas
       camera={{
@@ -16,9 +16,13 @@ const Solar = () => {
         up: [0, 0, 1],
       }}
     >
-      <Sun time={time}>
-        <Earth />
-      </Sun>
+      <SolarSystem>
+        <Sun />
+        <Earth>
+          <Moon />
+        </Earth>
+      </SolarSystem>
+      <Axes />
     </Canvas>
   );
 };
