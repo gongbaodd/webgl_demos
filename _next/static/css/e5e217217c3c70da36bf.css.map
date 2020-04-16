@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///fix.css"],"names":[],"mappings":"AAAA,QACE,YAAa,CACb,iBAAkB,CAClB,KAAM,CACN,QAAS,CACT,MAAO,CACP,OACF,CAEA,aACE,SACF","file":"static/css/e5e217217c3c70da36bf.css","sourcesContent":["#__next {\n  display: flex;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\ncanvas:focus {\n  outline: 0;\n}\n"],"sourceRoot":""}
