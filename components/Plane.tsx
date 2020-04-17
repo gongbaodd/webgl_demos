@@ -4,7 +4,7 @@ import {
   NearestFilter,
   DoubleSide,
   PlaneGeometry,
-  MeshPhongMaterial,
+  MeshToonMaterial,
 } from "three";
 import { useLoader } from "react-three-fiber";
 
@@ -23,7 +23,7 @@ const Plane = () => {
       rotation-x={Math.PI * -0.5}
       geometry={new PlaneGeometry(planeSize, planeSize)}
       material={
-        new MeshPhongMaterial({
+        new MeshToonMaterial({
           map: texture,
           side: DoubleSide,
         })
