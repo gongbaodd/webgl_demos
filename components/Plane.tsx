@@ -7,15 +7,19 @@ import {
   MeshToonMaterial,
 } from "three";
 import { useLoader } from "react-three-fiber";
+import { useMemo } from "react";
 
 const planeSize = 40;
 
 const Plane = () => {
-  const texture = useLoader(TextureLoader, "./checker.png");
-  texture.wrapS = RepeatWrapping;
-  texture.wrapT = RepeatWrapping;
-  texture.magFilter = NearestFilter;
-  texture.repeat.set(planeSize / 2, planeSize / 2);
+  const texture = useMemo(() => {
+    const t = new TextureLoader().load("./checker.png");
+    t.wrapS = RepeatWrapping;
+    t.wrapT = RepeatWrapping;
+    t.magFilter = NearestFilter;
+    t.repeat.set(planeSize / 2, planeSize / 2);
+    return t;
+  }, []);
 
   return (
     <mesh

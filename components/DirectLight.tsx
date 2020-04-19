@@ -13,12 +13,12 @@ const DirectLight = () => {
         name="DirectionLight"
         ref={light}
       />
-      {light.current && (
+      {/* {light.current && (
         <directionalLightHelper
           name="DirectionLightHelper"
           light={light.current}
         />
-      )}
+      )} */}
     </>
   );
 };
