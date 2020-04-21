@@ -1,9 +1,11 @@
 import { Canvas, useFrame } from "react-three-fiber";
 import React, { useRef, useState } from "react";
 import { Vector3 } from "three";
-import Layout from "../components/Layout";
+import Layout, { Props } from "../components/Layout";
+import { getStaticProps } from "../server/getMenu";
+import { FC } from "react";
 
-const Box = props => {
+const Box = (props) => {
   const mesh = useRef<THREE.Mesh>();
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
@@ -20,9 +22,9 @@ const Box = props => {
       {...props}
       ref={mesh}
       scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
-      onClick={e => setActive(!active)}
-      onPointerOver={e => setHover(true)}
-      onPointerOut={e => setHover(false)}
+      onClick={(e) => setActive(!active)}
+      onPointerOver={(e) => setHover(true)}
+      onPointerOut={(e) => setHover(false)}
     >
       <boxBufferGeometry attach="geometry" args={[1, 1, 1]}></boxBufferGeometry>
       <meshStandardMaterial
@@ -33,9 +35,9 @@ const Box = props => {
   );
 };
 
-const Three = () => {
+const Three: FC<Props> = ({ menuItems }) => {
   return (
-    <Layout>
+    <Layout menuItems={menuItems}>
       <Canvas>
         <ambientLight></ambientLight>
         <pointLight name="light1" position={new Vector3(10, 10, 10) as any} />
@@ -46,3 +48,4 @@ const Three = () => {
 };
 
 export default Three;
+export { getStaticProps };
