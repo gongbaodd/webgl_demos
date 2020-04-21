@@ -11,6 +11,7 @@ const menuItems = [
   { title: "Home", url: "/" },
   { title: "Three.js - Box", url: "/box" },
   { title: "Solar", url: "/solar" },
+  { title: "Cameras", url: "/cameras" },
 ];
 
 const SideMenu = () => {

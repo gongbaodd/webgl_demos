@@ -1,10 +1,12 @@
 import { useThree, useFrame } from "react-three-fiber";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, FC } from "react";
 import { PerspectiveCamera } from "three";
 
-let a = 1;
+interface Props {
+  aspect?: number;
+}
 
-const DefaultCamera = () => {
+const DefaultCamera: FC<Props> = ({ aspect }) => {
   const { setDefaultCamera, size } = useThree();
   const camera = useRef<PerspectiveCamera>();
 
@@ -21,7 +23,7 @@ const DefaultCamera = () => {
   return (
     <perspectiveCamera
       fov={60}
-      aspect={size.width / size.height}
+      aspect={aspect || size.width / size.height}
       near={0.1}
       far={500}
       position={[40, 10, 30]}
