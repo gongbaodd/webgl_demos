@@ -8,6 +8,7 @@ import {
 } from "three";
 import { useLoader } from "react-three-fiber";
 import { useMemo } from "react";
+import { Color } from "three";
 
 const planeSize = 40;
 
@@ -30,6 +31,7 @@ const Plane = () => {
         new MeshToonMaterial({
           map: texture,
           side: DoubleSide,
+          color: new Color(1.5, 1.5, 1.5),
         })
       }
     />

@@ -2,11 +2,11 @@ import dynamic from "next/dynamic";
 import Layout from "../components/Layout";
 import { getStaticProps } from "../server/getMenu";
 
-const Solar = dynamic(() => import("../playgrounds/solar"));
+const FakeShadow = dynamic(() => import("../playgrounds/fakeShadow"));
 
 export default ({ menuItems }) => (
   <Layout menuItems={menuItems}>
-    <Solar />
+    <FakeShadow />
   </Layout>
 );
 

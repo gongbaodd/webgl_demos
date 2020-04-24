@@ -5,22 +5,21 @@ import { useRouter } from "next/router";
 import Github from "./Github";
 import Utterances from "./Utterances";
 
+export interface Props {
+  menuItems: { title: string; url: string }[];
+}
+
 const { Content, Sider } = AntLayout;
 
-const menuItems = [
-  { title: "Home", url: "/" },
-  { title: "Three.js - Box", url: "/box" },
-  { title: "Solar", url: "/solar" },
-];
-
-const SideMenu = () => {
+const SideMenu: FC<{ menuItems?: Props["menuItems"] }> = ({ menuItems }) => {
+  const menu = menuItems || [];
   const { pathname } = useRouter();
-  const pathIndex = menuItems.findIndex(({ url }) => url === pathname) || 0;
+  const pathIndex = menu.findIndex(({ url }) => url === pathname) || 0;
 
   return (
     <Sider style={{ background: "#fff" }} width={360}>
       <Menu mode="vertical-left" defaultSelectedKeys={[pathIndex.toString(10)]}>
-        {menuItems.map((item, key) => {
+        {menu.map((item, key) => {
           return (
             <Menu.Item key={key}>
               <Link href={item.url}>
@@ -38,11 +37,11 @@ const SideMenu = () => {
   );
 };
 
-const Layout: FC<{}> = ({ children }) => {
+const Layout: FC<Props> = ({ children, menuItems }) => {
   return (
     <>
       <AntLayout>
-        <SideMenu />
+        <SideMenu menuItems={menuItems} />
         <Content>{children}</Content>
         <Github />
       </AntLayout>
