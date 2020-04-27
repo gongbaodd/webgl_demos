@@ -12,6 +12,7 @@ function Controls(props) {
     const { current } = ctlRef;
     if (current) {
       current.update();
+      current.enableDamping = true;
     }
   });
 

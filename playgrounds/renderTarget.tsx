@@ -12,6 +12,7 @@ const RenderTarget = () => {
         far: 5,
         position: [0, 0, 2],
       }}
+      invalidateFrameloop
     >
       <hemisphereLight />
       <Axes />
