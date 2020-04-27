@@ -2,11 +2,11 @@ import dynamic from "next/dynamic";
 import Layout from "../components/Layout";
 import { getStaticProps } from "../server/getMenu";
 
-const RenderTarget = dynamic(() => import("../playgrounds/renderTarget"));
+const Cannon = dynamic(() => import("../playgrounds/cannon"));
 
 export default ({ menuItems }) => (
   <Layout menuItems={menuItems}>
-    <RenderTarget />
+    <Cannon />
   </Layout>
 );
 

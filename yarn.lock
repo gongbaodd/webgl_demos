@@ -1681,6 +1681,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/cannon@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npm.taobao.org/@types/cannon/download/@types/cannon-0.1.4.tgz#71ef5dee4b9095adc3788afb8555dd6b7e29bad9"
+  integrity sha1-ce9d7kuQla3DeIr7hVXda34putk=
+
 "@types/cheerio@*":
   version "0.22.17"
   resolved "https://registry.npm.taobao.org/@types/cheerio/download/@types/cheerio-0.22.17.tgz?cache=0&sync_timestamp=1584719564614&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fcheerio%2Fdownload%2F%40types%2Fcheerio-0.22.17.tgz#e54f71c3135f71ebc16c8dc62edad533872c9e72"

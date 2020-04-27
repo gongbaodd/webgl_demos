@@ -13,6 +13,7 @@
   "dependencies": {
     "@sentry/browser": "5.15.4",
     "@sentry/integrations": "5.15.4",
+    "@types/cannon": "^0.1.4",
     "@types/enzyme": "3.10.5",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/jest": "25.1.4",
