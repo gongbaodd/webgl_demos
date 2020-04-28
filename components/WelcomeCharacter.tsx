@@ -1,64 +1,73 @@
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
-import { useEffect, useState } from "react";
-import {
-  Geometry,
-  AnimationMixer,
-  Object3D,
-  Mesh,
-  LoopOnce,
-  Clock,
-} from "three";
-import { useFrame } from "react-three-fiber";
+import { useState, useMemo, FC } from "react";
+import { AnimationMixer, LoopOnce, Group, AnimationClip } from "three";
+import { useFrame, useThree } from "react-three-fiber";
 
-const mixers: AnimationMixer[] = [];
+interface AnimationGroup extends Group {
+  animations: AnimationClip[];
+}
 
-const clock = new Clock();
+const useFbxLoader = (
+  url: string,
+  setObj: (obj: Group | AnimationGroup) => void
+) => {
+  return useMemo(() => {
+    const loader = new FBXLoader();
+    loader.load(url, (obj) => setObj(obj));
+  }, []);
+};
 
-const load = (loader: FBXLoader) =>
-  new Promise<Geometry & Object3D>(resolve =>
-    loader.load("/character.fbx", _obj => {
-      const obj: any = _obj;
-      const mixer = new AnimationMixer(obj);
-      mixers.push(mixer);
+const useAnimation = (obj: Group | AnimationGroup) => {
+  const animates = useMemo(() => {
+    const ans: AnimationMixer[] = [];
 
-      const action = mixer.clipAction(obj.animations && obj.animations[0]);
-      action.setLoop(LoopOnce, 1);
-      action.enabled = true;
-      action.clampWhenFinished = true;
-      action.play();
+    if (isAnimationGroup(obj)) {
+      const an = new AnimationMixer(obj);
+      ans.push(an);
+    }
 
-      obj.traverse(_child => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const child: Object3D & Mesh = _child as any;
-        if (child.isMesh) {
-          child.castShadow = true;
-          child.receiveShadow = true;
+    return ans;
+  }, [obj]);
+
+  const actions = useMemo(
+    () =>
+      animates.map((an) => {
+        if (isAnimationGroup(obj)) {
+          const action = an.clipAction(obj.animations[0]);
+          action.setLoop(LoopOnce, 1);
+          action.enabled = true;
+          action.clampWhenFinished = true;
+          action.play();
+          return action;
         }
-      });
-
-      resolve(obj);
-    })
+      }),
+    [animates]
   );
 
+  const { invalidate, scene, camera } = useThree();
+
+  useFrame(({ gl }, delta) =>
+    animates.forEach((mix, index) => {
+      mix.update(delta);
+
+      if (actions[index]?.isRunning() === false) {
+        invalidate();
+      }
+    })
+  );
+};
+
+const isAnimationGroup = (
+  obj: AnimationGroup | Group
+): obj is AnimationGroup => {
+  return "animations" in obj;
+};
+
 const Model = () => {
-  const [obj, setObj] = useState<any>(null);
-
-  useEffect(() => {
-    const loader = new FBXLoader();
-    load(loader).then(obj => setObj(obj));
-  }, []);
-
-  useFrame(() => {
-    mixers.forEach(mix => {
-      mix.update(clock.getDelta());
-    });
-  });
-
-  if (!obj) {
-    return null;
-  }
-
-  return <primitive object={obj}></primitive>;
+  const [obj, setObj] = useState<Group | AnimationGroup>(new Group());
+  useFbxLoader("/character.fbx", setObj);
+  useAnimation(obj);
+  return <primitive object={obj} name="character"></primitive>;
 };
 
 export default Model;

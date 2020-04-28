@@ -4,6 +4,7 @@ import DirectLight from "../components/WelcomeDirectLight";
 import HemiLight from "../components/WelcomeHemiLight";
 import Model from "../components/WelcomeCharacter";
 import Controls from "../components/OrbitControls";
+// import Axes from "../components/Axes";
 
 const Playground = () => {
   return (
