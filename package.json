@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sentry/browser": "5.15.5",
+    "@sentry/browser": "7.119.1",
     "@sentry/integrations": "5.15.5",
     "@types/cannon": "0.1.4",
     "@types/enzyme": "3.10.5",
